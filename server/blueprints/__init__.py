@@ -1,1 +1,0 @@
-from .transcribe import transcribe_blueprint as transcribe

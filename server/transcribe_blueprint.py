@@ -7,6 +7,7 @@ transcribe_blueprint = Blueprint('root', __name__)
 @transcribe_blueprint.route("/transcribe", methods=["GET"])
 def root_get():
     return """Please send a post request instead. We need an audio file. You can send the request like this:
+            import requests
             file = FileStorage(
             stream=open("audio_file.wav", "rb", buffering=0),
             filename="audio_file.wav",
