@@ -1,9 +1,10 @@
 from flask import Flask
-from .transcribe_blueprint import transcribe_blueprint
+import server
+
 
 
 app = application = Flask(__name__)
-app.register_blueprint(transcribe_blueprint)
+app.register_blueprint(server.transcribe_blueprint)
 app.debug = True
 
 
