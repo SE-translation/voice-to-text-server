@@ -1,4 +1,4 @@
-from server.load import app, application
+from load import app, application
 
 application
 app
