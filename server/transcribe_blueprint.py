@@ -19,9 +19,13 @@ def root_get():
 
 @transcribe_blueprint.route("/transcribe", methods=["POST"])
 def root_post():
+    print(request.files)
+    print(request)
     if "audio_file" in request.files.keys():
+        print("got here")
         file = request.files['audio_file']
         text = voice_to_text.transcribe_audio(file, "sphinx")
-        return '{{"text":{text}",","Code":0}}'.format(text=text)
+        print(text)
+        return '{{"text":"{text}","Code":0}}'.format(text=text)
     else:
         return '{"text":"No audio file received :(","Code":-1}'
