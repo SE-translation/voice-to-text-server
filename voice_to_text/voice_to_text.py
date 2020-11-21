@@ -16,4 +16,3 @@ def transcribe_audio(file, audio_engine="sphinx") -> str:
     else:
         text = r.recognize_sphinx(audio)
     return text
-
