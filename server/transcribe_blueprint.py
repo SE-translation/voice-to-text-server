@@ -1,4 +1,5 @@
 from flask import Blueprint, request
+
 import voice_to_text
 
 transcribe_blueprint = Blueprint('root', __name__)
