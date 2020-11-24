@@ -30,3 +30,8 @@ def root_post():
         return '{{"text":"{text}","Code":0}}'.format(text=text)
     else:
         return '{"text":"No audio file received :(","Code":-1}'
+
+
+@transcribe_blueprint.route("/", methods=["GET"])
+def rroot_get():
+	return "You are probably looking for /transcribe"
